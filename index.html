@@ -5,13 +5,14 @@
     <meta charset="utf-8">
     <title>ngDialog demo</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/ngDialog.css">
     <link rel="stylesheet" href="../css/ngDialog-theme-default.css">
-    <link rel="stylesheet" href="../css/ngDialog-theme-plain.css">
+    <!-- <link rel="stylesheet" href="../css/ngDialog-theme-plain.css"> -->
     <style>
     a,
     button {
-        font: 14px 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+        font: 14px 'MorebiRounded-Regular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
         display: block;
         color: #333;
         margin-bottom: 10px;
@@ -29,6 +30,15 @@
     .ngdialog h2:focus {
         outline: none;
     }
+    
+    .ngdialog-content {
+        width: 600px !important;
+    }
+    
+    .fb-button {
+        padding-right:220px;
+        
+    }
     </style>
 </head>
 
@@ -40,19 +50,11 @@
     <!-- Templates -->
     <script type="text/ng-template" id="firstDialogId">
         <div class="ngdialog-message">
-            <h3>Like everything Arlo, sharing is easy....</h3>
-
-
-
-            <video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-
-
-
-
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Congratulations on activating your cameras!</h3>
+                </div>
+            </div>
             <p ng-show="theme">Test 2- content for <code>{{theme}}</code>
             </p>
             <p ng-show="ngDialogData.foo">Data passed through: <code>{{ngDialogData.foo}}</code>
@@ -61,14 +63,11 @@ Your browser does not support the video tag.
             </p>
         </div>
         <div class="ngdialog-buttons">
-         
-
-
-
-            <button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond()">Login to Facebook</button>
-
-
-
+            <div class="row">
+                <div class="col-md-12 text-center fb-button">
+                    <button type="button" class=" ngdialog-button ngdialog-button-primary">Login to Facebook</button>
+                </div>
+            </div>
         </div>
     </script>
     <!-- Scripts -->
@@ -113,25 +112,6 @@ Your browser does not support the video tag.
 
 
 
-
-
-        $rootScope.jsonData = '{"foo": "bar"}';
-        $rootScope.theme = 'ngdialog-theme-default';
-
-        $scope.directivePreCloseCallback = function(value) {
-            if (confirm('Close it? MainCtrl.Directive. (Value = ' + value + ')')) {
-                return true;
-            }
-            return false;
-        };
-
-        $scope.preCloseCallbackOnScope = function(value) {
-            if (confirm('Close it? MainCtrl.OnScope (Value = ' + value + ')')) {
-                return true;
-            }
-            return false;
-        };
-
         $scope.open = function() {
             ngDialog.open({
                 template: 'firstDialogId',
@@ -165,51 +145,10 @@ Your browser does not support the video tag.
             });
         };
 
-        $scope.openConfirm = function() {
-            ngDialog.openConfirm({
-                template: 'modalDialogId',
-                className: 'ngdialog-theme-default'
-            }).then(function(value) {
-                console.log('Modal promise resolved. Value: ', value);
-            }, function(reason) {
-                console.log('Modal promise rejected. Reason: ', reason);
-            });
-        };
-
-        $scope.openConfirmWithPreCloseCallbackOnScope = function() {
-            ngDialog.openConfirm({
-                template: 'modalDialogId',
-                className: 'ngdialog-theme-default',
-                preCloseCallback: 'preCloseCallbackOnScope',
-                scope: $scope
-            }).then(function(value) {
-                console.log('Modal promise resolved. Value: ', value);
-            }, function(reason) {
-                console.log('Modal promise rejected. Reason: ', reason);
-            });
-        };
 
 
-        $scope.openPlain = function() {
-            $rootScope.theme = 'ngdialog-theme-plain';
-
-            ngDialog.open({
-                template: 'firstDialogId',
-                controller: 'InsideCtrl',
-                className: 'ngdialog-theme-plain',
-                closeByDocument: false
-            });
-        };
 
 
-        $scope.openWithoutOverlay = function() {
-            ngDialog.open({
-                template: '<h2>Notice that there is no overlay!</h2>',
-                className: 'ngdialog-theme-default',
-                plain: true,
-                overlay: false
-            });
-        };
 
         $rootScope.$on('ngDialog.opened', function(e, $dialog) {
             console.log('ngDialog opened: ' + $dialog.attr('id'));
