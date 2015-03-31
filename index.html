@@ -36,8 +36,43 @@
     }
     
     .fb-button {
-        padding-right:220px;
-        
+        padding-right: 220px;
+    }
+    
+    .fb-btn-clr {
+        background-color: #4763ba !important;
+        border-radius: 15px; 
+    }
+    
+    .top-grey {
+        background-color: #f1f1f1;
+        border-bottom: 1px solid #666;
+        border-color: #e5e5e5;
+        height: 45px;
+        background-color: lightgrey;
+        margin-top: 10px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    
+    #ngdialog1-aria-labelledby h3 {
+        background: pink;
+    }
+    
+    .remove-lft-rht-padding {
+        padding-left: 0px;
+        padding-right: 0px;
+        /*margin-left: 3px; */
+    }
+    
+    .top-adjustment {
+        top: -35px;
+    }
+    
+    .heading-h3 {
+        padding-top: 11px;
+        padding-left: 33px;
+        font-family: MorebiRounded-Regular,Arial;
     }
     </style>
 </head>
@@ -51,21 +86,50 @@
     <script type="text/ng-template" id="firstDialogId">
         <div class="ngdialog-message">
             <div class="row">
-                <div class="col-md-12">
-                    <h3>Congratulations on activating your cameras!</h3>
+                <div class="col-md-12 remove-lft-rht-padding top-adjustment">
+                    <div class="top-grey">
+                        <h3 class="heading-h3">Congratulations on activating your cameras!</h3>
+                    </div>
                 </div>
             </div>
             <p ng-show="theme">Test 2- content for <code>{{theme}}</code>
             </p>
             <p ng-show="ngDialogData.foo">Data passed through: <code>{{ngDialogData.foo}}</code>
             </p>
-            <p ng-show="dialogModel.message"> Share via: icons
-            </p>
+            
         </div>
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="camera_hand.png" alt="">
+            </div>
+
+            <div class="col-md-6">
+                <p>Tell your friends and family how seasy it is to set up Arlo cameras OR just tell them how cool your new Arlo Home Security system is</p>
+            </div>
+
+
+        </div>
+
+
+            <br/>
+            <br/>
+        <p ng-show="dialogModel.message"> Share via: icons
+            </p>
+          
+
+        
+
+
+
+
+
         <div class="ngdialog-buttons">
             <div class="row">
                 <div class="col-md-12 text-center fb-button">
-                    <button type="button" class=" ngdialog-button ngdialog-button-primary">Login to Facebook</button>
+                    <button type="button" class=" ngdialog-button ngdialog-button-primary fb-btn-clr">Login to Facebook</button>
                 </div>
             </div>
         </div>
