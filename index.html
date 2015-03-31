@@ -50,7 +50,7 @@
         border-color: #e5e5e5;
         height: 45px;
         background-color: lightgrey;
-        margin-top: 10px;
+        margin-top: 19px;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
     }
@@ -77,6 +77,7 @@
     
     .green-p {
         color: green;
+        font-size: 18px;
     }
     
     .main {
@@ -106,6 +107,8 @@
         border-radius: 0 0 10px 10px;
         position: relative;
         display: block;
+        font-family: MorebiRounded-Regular, Arial;
+        font-weight: normal;
     }
     
     .footer {
@@ -150,8 +153,7 @@
         margin: auto;
         text-align: center;
         position: relative;
-        padding: 20px 0;
-        width: 160px;
+        width: 500px;
     }
     
     .social-links-wrapper .item {
@@ -173,7 +175,15 @@
         position: relative;
         display: block;
     }
-    
+
+
+    .social-links-wrapper .item.sharevia {
+        background-position: -40px top;
+        width:80px;
+        margin-top:11px; 
+    }    
+
+
     .social-links-wrapper .item.twitter a {
         background-position: -40px top;
     }
@@ -262,15 +272,20 @@
                 <img src="camera_hand.png" alt="">
             </div>
             <div class="col-md-6">
-                <p class="green-p">Tell your friends and family how seasy it is to set up Arlo cameras OR just tell them how cool your new Arlo Home Security system is</p>
+                <p class="green-p">Tell your friends and family how seasy it is to set up Arlo cameras or just tell them how cool your new Arlo is</p>
             </div>
         </div>
         <br/>
         <br/>
 
-        <p ng-show="dialogModel.message"> Share via:
+        
             <div class="row social-links-row">
                 <div class="social-links-wrapper">
+
+                <div class="item sharevia">
+                share via
+                    </div>
+
                     <div class="item facebook">
                         <a href="https://www.facebook.com/arlosmarthome"></a>
                     </div>
@@ -285,8 +300,7 @@
                     </div>
                 </div>
             </div>
-        </p>
-
+        
 
 
 
