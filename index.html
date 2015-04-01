@@ -160,7 +160,7 @@
     
     .social-links-wrapper .item {
         position: relative;
-        width: 40px;
+        width: 97px; 
         height: 40px;
         float: left;
         display: inline-block;
@@ -251,6 +251,33 @@
 </head>
 
 <body ng-controller="MainCtrl">
+
+ <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1523976041172384',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
+
+
+
+
+
+
     <!-- Buttons and links -->
     <a href="" ng-click="openDefault()">Default theme</a>
     <a href="" ng-click="openPlain()">Plain theme</a>
@@ -290,7 +317,9 @@
                     </div>
 
                     <div class="item facebook">
-                        <a href="https://www.facebook.com/arlosmarthome"></a>
+                        
+                       <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+
                     </div>
                     <div class="item twitter">
                         <a href="https://twitter.com/ArloSmartHome"></a>
