@@ -18,32 +18,32 @@
         margin-bottom: 10px;
     }
     /* The following 'important' styles are just here to show off trapFocus */
-    
+
     button.ngdialog-button {
         border: solid transparent 1px !important;
     }
-    
+
     button.ngdialog-button:focus {
         border: solid black 1px !important;
     }
-    
+
     .ngdialog h2:focus {
         outline: none;
     }
-    
+
     .ngdialog-content {
         width: 600px !important;
     }
-    
+
     .fb-button {
         padding-right: 220px;
     }
-    
+
     .fb-btn-clr {
         background-color: #4763ba !important;
         border-radius: 15px;
     }
-    
+
     .top-grey {
         background-color: #f1f1f1;
         border-bottom: 1px solid #666;
@@ -54,34 +54,34 @@
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
     }
-    
+
     #ngdialog1-aria-labelledby h3 {
         background: pink;
     }
-    
+
     .remove-lft-rht-padding {
         padding-left: 0px;
         padding-right: 0px;
         /*margin-left: 3px; */
     }
-    
+
     .top-adjustment {
         top: -35px;
     }
-    
+
     .heading-h3 {
         padding-top: 11px;
         padding-left: 33px;
         font-family: MorebiRounded-Regular, Arial;
     }
-    
+
     .green-p {
         color: green;
         font-size: 18px;
         margin-right: 45px;
         /*margin-left: 15px;*/
     }
-    
+
     .main {
         background: #ffffff;
         padding: 50px 45px 60px;
@@ -94,7 +94,7 @@
         border-radius: 10px 10px 0 0;
         position: relative;
     }
-    
+
     .social-links {
         padding: 7px 45px;
         margin-bottom: 10px;
@@ -112,20 +112,20 @@
         font-family: MorebiRounded-Regular, Arial;
         font-weight: normal;
     }
-    
+
     .footer {
         padding: 40px 25px 0;
     }
-    
+
     .row {
         position: relative;
         text-align: left;
     }
-    
+
     .row.top-logo-row {
         margin-bottom: 45px;
     }
-    
+
     .top-logo {
         background-image: url("https://arlocommon.vz.netgear.com/img2/email/top_arlo_logo.png");
         background-repeat: no-repeat;
@@ -133,7 +133,7 @@
         height: 60px;
         margin: auto;
     }
-    
+
     .bot-logo {
         background-image: url("https://arlocommon.vz.netgear.com/img2/email/bot_arlo_logo.png");
         background-repeat: no-repeat;
@@ -141,7 +141,7 @@
         height: 40px;
         margin: auto;
     }
-    
+
     .row.top-logo-row,
     .row.bot-logo-row,
     .row.social-links-row,
@@ -149,7 +149,7 @@
         text-align: center;
         width: 100%;
     }
-    
+
     .social-links-wrapper {
         display: inline-block;
         margin: auto;
@@ -157,19 +157,21 @@
         position: relative;
         width: 500px;
     }
-    
+
     .social-links-wrapper .item {
         position: relative;
-        width: 115px; 
+        width: 115px;
         height: 40px;
         float: left;
         display: inline-block;
         overflow: hidden;
+        margin-left: 11px; 
+        margin-top:9px;
     }
-    
+
     .social-links-wrapper .item a {
-        background-image: url("https://arlocommon.vz.netgear.com/img2/email/social_media_sprite.png");
-        background-position: left top;
+       /* background-image: url("https://arlocommon.vz.netgear.com/img2/email/social_media_sprite.png");
+       */ background-position: left top;
         background-repeat: no-repeat;
         width: 40px;
         height: 40px;
@@ -183,29 +185,44 @@
         background-position: -40px top;
         width:80px;
         margin-top:11px;
-        margin-right: 20px; 
-    }    
+        margin-right: 20px;
+    }
+
+
+
+    .social-links-wrapper .item.facebook {
+        background-position: -40px top;
+        width:80px;
+        margin-top:13px;
+        margin-right: 20px;
+    }
+
+
+
+    .social-links-wrapper .item.googleplus {
+        background-position: -40px top;
+        width:80px;
+        margin-top:13px;
+        margin-right: 20px;
+        margin-left: 26px !important;
+    }
+
+
 
 
     .social-links-wrapper .item.twitter a {
         background-position: -40px top;
     }
-    
-    .social-links-wrapper .item.facebook a {
-        background-position: -80px top;
-    }
-    
-    .social-links-wrapper .item.googleplus a {
-        background-position: -160px top;
-    }
-    
+
+
+
     .store-links {
         width: 100%;
         display: block;
         position: relative;
         text-align: center;
     }
-    
+
     .store-links>span {
         display: table;
         margin: 20px auto;
@@ -213,19 +230,19 @@
         position: relative;
         width: 290px;
     }
-    
+
     .store-links a {
         display: block;
         margin-left: 20px;
         float: left;
         position: relative;
     }
-    
+
     .store-links a:first-child {
         margin-right: 20px;
         margin-left: 0px;
     }
-    
+
     .store-links a.app-store {
         background-image: url("https://arlocommon.vz.netgear.com/img2/email/app_store_badge.png");
         background-repeat: no-repeat;
@@ -233,7 +250,7 @@
         height: 40px;
         display: block;
     }
-    
+
     .store-links a.google-play {
         background-image: url("https://arlocommon.vz.netgear.com/img2/email/google-play-bage.png");
         background-repeat: no-repeat;
@@ -241,7 +258,7 @@
         height: 40px;
         display: block;
     }
-    
+
     .header-title-row h1 {
         color: #06a94e;
         font-size: 31px;
@@ -277,7 +294,7 @@
 
 
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="rushnwash">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="rushnwash" data-count="none" >Tweet</a>
 
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
@@ -312,8 +329,8 @@
             </p>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <img src="camera_hand.png" alt="arlo" border="2">
+            <div class="col-md-6 ">
+                <img class="" src="camera_hand.png" alt="arlo" border="2">
             </div>
             <div class="col-md-6">
                 <p class="green-p">Tell your friends and family how seasy it is to set up Arlo cameras or just tell them how cool your new Arlo is</p>
@@ -322,7 +339,15 @@
         <br/>
         <br/>
 
-        
+
+
+        <div class="social-links">
+            Installing Arlocameras is a breeze. Took me less than 10 minutes because it is truely 100% wirefree. #Arlosmarthome http://bit.ly/arloshare
+        </div>
+
+
+
+
              <div class="row social-links-row">
                 <div class="social-links-wrapper">
 
@@ -331,37 +356,40 @@
                     </div>
 
                     <div class="item facebook">
-                        
-                       <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+
+                       <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button"></div>
 
                     </div>
 
-                    <div class="item ">                   
-                       <a href="https://twitter.com/share" class="twitter-share-button" data-text="Installing Arlocameras is a breeze. It's truly wirefree. #Arlosmarthome http://bit.ly/arloshare #Arlosmarthome http://bit.ly/arloshare" data-size="large">Tweet</a>
+
+
+
+
+
+                    <div class="item ">
+                       <a href="https://twitter.com/share" class="twitter-share-button" data-text="Installing Arlocameras is a breeze. It's truly wirefree. #Arlosmarthome http://bit.ly/arloshare" data-size="large" data-count="none" >Tweet</a>
                     </div>
 
 
-                    <div class="item youtube">
-                        <div class="g-plus" data-action="share" data-annotation="bubble" data-height="24" data-href="http://arlo.com/"></div>
+                    <div class="item googleplus">
+                        <div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="http://arlo.com/"></div>
                     </div>
 
 
                 </div>
             </div>
-        
 
 
 
-        <div class="social-links">
-            Installing Arlocameras is a breeze. Took me less than 10 minutes because it is truely 100% wirefree. #Arlosmarthome http://bit.ly/arloshare
-        </div>
-        <div class="ngdialog-buttons">
-            <div class="row">
-                <div class="col-md-12 text-center fb-button">
-                    <button type="button" class=" ngdialog-button ngdialog-button-primary fb-btn-clr">share on Facebook</button>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
     </script>
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
